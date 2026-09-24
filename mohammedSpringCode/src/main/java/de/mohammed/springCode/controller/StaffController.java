@@ -1,9 +1,15 @@
 package de.mohammed.springCode.controller;
 
+import org.springframework.stereotype.Controller;
+/**
+ * Create  => post 
+ * Read    => GET 
+ * Update  => PUT
+ * Delete  => DELETE
+ */
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class StaffController {
 	
 	@GetMapping("/hello")
@@ -18,6 +24,16 @@ public class StaffController {
 				+ "</ol>"
 				+ "</html>";
 		return msg;
+	}
+	
+	@GetMapping("/helloSpring")
+	public String helloSpring() {
+		return "Hello Spring  :-)";
+	}
+	
+	@GetMapping("/staffnames")
+	public String getStaffName() {
+		return "staffnames";  // return view
 	}
 
 }
