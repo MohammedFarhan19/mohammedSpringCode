@@ -9,6 +9,7 @@
 	<body>
 	<h1>staff Details</h1>
 	<table class="myTable">
+	<caption class="caption">Staff Details Table</caption>
 		<tr>
 			<th>Name</th>
 			<th>Titel</th>
@@ -22,6 +23,14 @@
 			<!-- alternative -->
 			<td th:text="*{staffSalary > 400 ? 'good' : 'Bad'}"></td>
 		</tr>
+		
 	</table>
+		<!-- switch -->
+		<div th:switch="${staff.staffName}">
+			<p th:case="'Tim'">Hello Tim</p>
+			<p th:case="'Sara'">Hello Sara</p>
+			<p th:case="'Jan'">Hello Jan</p>
+			
+		</div>
 	</body>
 </html>
