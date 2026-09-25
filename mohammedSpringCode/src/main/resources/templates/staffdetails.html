@@ -17,7 +17,10 @@
 		<tr th:object="${staff}">  <!-- Object modle  -->
 			<td th:text="*{staffName}"></td> <!-- selection -->
 			<td th:text="*{staffTitel}"></td>
-			<td th:text="*{staffSalary}"></td>
+			<!--  <p th:if="*{staffSalary > 1000}" > good</p>-->
+			<!--  <p th:unless="*{staffSalary < 400}" > NOT very good</p>  <!-- genau so wie else -->
+			<!-- alternative -->
+			<td th:text="*{staffSalary > 400 ? 'good' : 'Bad'}"></td>
 		</tr>
 	</table>
 	</body>

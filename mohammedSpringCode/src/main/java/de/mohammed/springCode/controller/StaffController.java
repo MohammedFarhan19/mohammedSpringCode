@@ -36,7 +36,7 @@ public class StaffController {
 	
 	@GetMapping("/staffdetails")
 	public String getStaffDetails(Model model) {
-		Staff myStaff = new Staff("Tim", "Developer", 1000);
+		Staff myStaff = new Staff("Tim", "Developer", 300);
 		model.addAttribute("staff", myStaff);
 		return "staffdetails";  // return view
 	}
