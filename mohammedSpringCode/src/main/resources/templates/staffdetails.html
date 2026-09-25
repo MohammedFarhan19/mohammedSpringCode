@@ -14,10 +14,10 @@
 			<th>Titel</th>
 			<th>Salary</th>
 		</tr>
-		<tr>
-			<td th:text="${staff.staffName}"></td>
-			<td th:text="${staff.staffTitel}"></td>
-			<td th:text="${staff.staffSalary}"></td>
+		<tr th:object="${staff}">
+			<td th:text="*{staffName}"></td>
+			<td th:text="*{staffTitel}"></td>
+			<td th:text="*{staffSalary}"></td>
 		</tr>
 	</table>
 	</body>
