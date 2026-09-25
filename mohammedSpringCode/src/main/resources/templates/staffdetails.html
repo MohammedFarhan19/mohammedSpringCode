@@ -14,8 +14,8 @@
 			<th>Titel</th>
 			<th>Salary</th>
 		</tr>
-		<tr th:object="${staff}">
-			<td th:text="*{staffName}"></td>
+		<tr th:object="${staff}">  <!-- Object modle  -->
+			<td th:text="*{staffName}"></td> <!-- selection -->
 			<td th:text="*{staffTitel}"></td>
 			<td th:text="*{staffSalary}"></td>
 		</tr>
