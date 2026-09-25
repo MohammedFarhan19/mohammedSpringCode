@@ -1,6 +1,7 @@
 package de.mohammed.springCode.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 /**
  * Create  => post 
  * Read    => GET 
@@ -8,6 +9,8 @@ import org.springframework.stereotype.Controller;
  * Delete  => DELETE
  */
 import org.springframework.web.bind.annotation.GetMapping;
+
+import de.mohammed.springCode.model.Staff;
 
 @Controller
 public class StaffController {
@@ -31,9 +34,25 @@ public class StaffController {
 		return "Hello Spring  :-)";
 	}
 	
-	@GetMapping("/staffnames")
-	public String getStaffName() {
-		return "staffnames";  // return view
+	@GetMapping("/staffdetails")
+	public String getStaffDetails(Model model) {
+		Staff myStaff = new Staff("Tim", "Developer", 1000);
+		model.addAttribute("staff", myStaff);
+		return "staffdetails";  // return view
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
